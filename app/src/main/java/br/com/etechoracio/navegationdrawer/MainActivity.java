@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_send) {
 
         }
-        Fragment fragment = br.com.etechoracio.navigationdrawer.CustomFragment.newInstance(nome, idImagem);
+        Fragment fragment = br.com.etechoracio.navegationdrawer.CustomFragment.newInstance(nome, idImagem);
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.content_frame,fragment);
         transaction.commit();
