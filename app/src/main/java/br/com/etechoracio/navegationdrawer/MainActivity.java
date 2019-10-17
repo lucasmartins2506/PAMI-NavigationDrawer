@@ -1,8 +1,11 @@
 package br.com.etechoracio.navegationdrawer;
 
+
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -77,20 +80,41 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        String nome = null;
+        int idImagem = 0;
 
-        if (id == R.id.nav_home) {
+
+        if (id == R.id.nav_Sten) {
+            nome ="Sten";
+            idImagem = R.drawable.sten;
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_Thompson) {
+            nome = "Thompson";
+            idImagem = R.drawable.Thompson;
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_MP40) {
+            nome = "MP40";
+            idImagem = R.drawable.MP40;
 
-        } else if (id == R.id.nav_tools) {
+        } else if (id == R.id.nav_PPSH_41) {
+            nome = "PPSH-41";
+            idImagem = R.drawable.PPSH_41;
 
-        } else if (id == R.id.nav_share) {
+        }else if (id == R.id.nav_Kar98) {
+            nome = "Kar98";
+            idImagem = R.drawable.Kar98;
+
+        }
+            else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
 
         }
+        Fragment fragment = br.com.etechoracio.navigationdrawer.CustomFragment.newInstance(nome, idImagem);
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.content_frame,fragment);
+        transaction.commit();
+        setTitle(nome);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
