@@ -90,19 +90,19 @@ public class MainActivity extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.nav_Thompson) {
             nome = "Thompson";
-            idImagem = R.drawable.Thompson;
+            idImagem = R.drawable.thompson;
 
         } else if (id == R.id.nav_MP40) {
             nome = "MP40";
-            idImagem = R.drawable.MP40;
+            idImagem = R.drawable.mp;
 
         } else if (id == R.id.nav_PPSH_41) {
             nome = "PPSH-41";
-            idImagem = R.drawable.PPSH_41;
+            idImagem = R.drawable.ppsh;
 
         }else if (id == R.id.nav_Kar98) {
             nome = "Kar98";
-            idImagem = R.drawable.Kar98;
+            idImagem = R.drawable.kar;
 
         }
             else if (id == R.id.nav_share) {
